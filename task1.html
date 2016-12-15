@@ -8,17 +8,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script> src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"</script>
+
   
 <style>
 
 #liid {
     float: left;
-    text-align: right;
     text-decoration: none;
     font-size: small;
 
 }
 #ulid {
+   
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -27,6 +28,7 @@
     text-decoration: none;
     display: block;
     padding-left: 550px;
+
 }
 #tag {
     display: inline-block;
@@ -54,9 +56,10 @@
 .container-fluid{
   background-color:#2874f0;
   padding-left:50px; 
+  padding-bottom: 8px;
 }
 
-.white{
+#wite{
   width:20px;
 }
 
@@ -85,7 +88,7 @@
     border:90;
     border-radius: 0px;
     color: #665a0a;
-    padding: 0 25px 0 25px;
+    padding: 0 25px 5px 25px;
     border-left: solid 1px #ccc;
     position: relative;
 }
@@ -111,21 +114,74 @@
 }
 
 #btnstyle{
-  background-color:  #2874f0;
-  position: absolute;
+    background-color: #2469d9;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23),inset 1px 1px 0 0 hsla(0,0%,100%,.2);
+    padding: 10px 0;
+    text-align: center;
+    height: 36px;
+    border-radius: 2px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 120px;
+    display: inline-block;
+    position: absolute;
 }
-#list{
-  display: inline-block;               
+  #list{
+    display: inline-block;               
     color: white;                     /*Style  pending*/
     text-align: center;              /*inherited from 'li a'*/
     text-decoration: none;
     padding-top:16px; 
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+
+}
+
+/*
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2874f0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 
-</style></head>
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 2500px; /* Used in this example to enable scrolling */
+}
+
+
+.fixed_menu{
+   position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 10;
+}
+
+#navv{
+     padding-top:80px;
+}
+
+</style>
+ </head>
   <body>
+    <div class="fixed_menu">
     <div class="top_menu">
     <ul id="ulid">
   <li id="liid"><a id ="tag" href="#">F-Assured</a></li>
@@ -134,7 +190,7 @@
   <li id="liid"><a id ="tag" href="#">Download App</a></li>
   <li id="liid"><a id ="tag" href="#">24&#215;7 Customer Care</a></li>
   <li id="liid"><a id ="tag" href="#">Track Order</a></li>
-  <li id="liid"><a id ="tag" href="#"><img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/bell-outline.png" class="glyphicon glyphicon-home white"></a></li>
+  <li id="liid"><a id ="tag" href="#"><img src="F:\Career and Motivation\Coding Mart\Tasks\flipkart clone\icons\bell.png" id= "wite"></a></li>
   <li id="liid"><a id ="tag" href="#">Signup</a></li>
   <li id="liid"><a id ="tag" href="#">Login</a></li>
 </ul></div>
@@ -142,8 +198,7 @@
       <div class="navbar-header"><a href="F:\Career and Motivation\Coding Mart\Tasks\flipkart clone\task1.html">
         <img src="F:\Career and Motivation\Coding Mart\Tasks\flipkart clone\icons\image.jpg" style="width:150px;"></a>
       </div>
-      <div>
-        <div class="col-md-10">
+        <div class="col-md-9">
             <div id="custom-search-input">
                 <div class="input-group col-md-12" id="algn">
                     <input type="text" class="form-control " placeholder="Search for Products, Brands and More" />
@@ -153,17 +208,23 @@
                 </div>
             </div>
         </div>
-
+<div class="btn btn-primary" id = "btnstyle">
+          <span class="glyphicon glyphicon-shopping-cart"></span> CART <div></div>
 </div>
-<div class="btn btn-primary" id = "btnstyle">Cart</div>
-</div>
+</div></div>
 <nav class="navbar navbar-inverse" style="border-radius:0px;" id="is_blue" style="outline-color:#2874f0">
-<ul id="list">
-<marquee><li>Work under progress</li></marquee>
+  <div id="navv">
+<ul id="ulid">
+  <li class="dropdown">ELECTRONICS</li>
+  <li class="dropdown">APPLIANCES</li>
+  <li class="dropdown">MEN</li>
+  <li class="dropdown">WOMEN</li>
+  <li class="dropdown">BABY & KIDS</li>
+  <li class="dropdown">HOME & FURNITURE</li>
+  <li class="dropdown">BOOKS & MORE</li>
+  <li class="dropdown">OFFERS ZONE</li>
 </ul>
 </div>
 </nav>
-<div style="width:100%; padding-top:200px;"><center><h1>WORK UNDER PROGRESS</h1></center></div>
 </body>
-
 </html>
